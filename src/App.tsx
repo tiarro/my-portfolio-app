@@ -1,35 +1,81 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
+import Header from "./components/oganisms/header";
+import Footer from "./components/oganisms/footer";
+import About from "./components/oganisms/about";
+import Home from "./components/oganisms/home";
+import Projects from "./components/oganisms/projects";
+import { Toast } from "primereact/toast";
+import { SpeedDial } from "primereact/speeddial";
+import { useRef } from "react";
+import { FaHome } from "react-icons/fa";
+import { CgProfile } from "react-icons/cg";
+import { GrProjects } from "react-icons/gr";
+import { FiPhoneCall } from "react-icons/fi";
+import Contact from "./components/oganisms/contact";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const toast = useRef<Toast | null>(null);
+  const items = [
+    {
+      label: "Home",
+      icon: <FaHome />,
+      command: () => {
+        document.getElementById("home")?.scrollIntoView({
+        behavior: "smooth",
+      });
+      }
+    },
+    {
+      label: "About",
+      icon: <CgProfile />,
+      command: () => {
+        document.getElementById("about")?.scrollIntoView({
+        behavior: "smooth",
+      });
+      },
+    },
+    {
+      label: "Portfolio",
+      icon: <GrProjects />,
+      command: () => {
+        document.getElementById("projects")?.scrollIntoView({
+        behavior: "smooth",
+      });
+      },
+    },
+    {
+      label: "Contact",
+      icon: <FiPhoneCall />,
+      command: () => {
+        document.getElementById("contact")?.scrollIntoView({
+        behavior: "smooth",
+      });
+      },
+    },
+  ];
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className="flex flex-col items-center min-h-screen w-full overflow-x-hidden">
+      <Header />
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
+      <div className="fixed bottom-0 right-0 z-50 w-full h-16 flex items-center justify-center">
+        <Toast ref={toast} />
+        <SpeedDial
+          model={items}
+          direction="up"
+          transitionDelay={80}
+          showIcon="pi pi-bars"
+          hideIcon="pi pi-times"
+          className="speeddial-style right-16 bottom-10 gap-3"
+          buttonClassName="p-button-outlined h-16 w-16 rounded-full"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
