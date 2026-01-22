@@ -1,7 +1,7 @@
 import { MyImage } from "../../../assets/img";
 import { useTheme } from "../../../ThemeContext";
 import { Image } from "primereact/image";
-import { FaLinkedin, FaGithub, FaReact, FaSass } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaReact, FaSass, FaDownload } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
@@ -68,6 +68,9 @@ export default function Home() {
             <FaGithub className={`text-2xl sm:text-3xl transition-colors duration-300 cursor-pointer ${
               isDarkTheme ? "text-white hover:text-gray-400" : "text-black hover:text-gray-800"
             }`} onClick={() => window.open(URL_ENUM.GITHUB, "_blank")} />
+            <FaDownload className={`text-xl sm:text-3xl transition-colors duration-300 cursor-pointer ${
+              isDarkTheme ? "text-white hover:text-green-400" : "text-black hover:text-green-800"
+            }`} onClick={() => window.open(URL_ENUM.RESUME_PDF, "_blank")} />
           </div>
         </div>
       </div>
