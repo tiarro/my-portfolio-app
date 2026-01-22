@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ButtonProps from "../../atoms/button";
 import { useTheme } from "../../../ThemeContext.tsx";
 
