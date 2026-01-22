@@ -29,7 +29,7 @@ export default function Projects() {
         ${isDarkTheme ? "border-white/50" : "border-black/50"}`}
     >
       <div className="flex flex-col justify-center items-center space-y-3 max-w-full lg:max-w-md flex-1">
-        <div className="flex h-auto w-full pb-4">
+        <div className="flex flex-col gap-3 h-auto w-full pb-3">
           <p
             className={`font-bold text-transparent bg-clip-text text-sm tracking-wide uppercase transition-colors duration-300 ${
               isDarkTheme
@@ -38,6 +38,16 @@ export default function Projects() {
             }`}
           >
             Portfolio
+          </p>
+
+          <p
+            className={`text-sm sm:text-base leading-relaxed transition-colors duration-300 ${
+              isDarkTheme ? "text-gray-200" : "text-gray-700"
+            }`}
+          >
+            Explore my latest projects where creativity meets functionality.
+            Each project represents a unique challenge solved with modern web
+            technologies and thoughtful design
           </p>
         </div>
 
