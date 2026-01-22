@@ -69,8 +69,8 @@ function App() {
           transitionDelay={80}
           showIcon="pi pi-bars"
           hideIcon="pi pi-times"
-          className="speeddial-style right-16 bottom-10 gap-3"
-          buttonClassName="p-button-outlined h-16 w-16 rounded-full"
+          className="speeddial-style right-6 sm:right-8 lg:right-16 bottom-6 sm:bottom-8 lg:bottom-10 gap-2 sm:gap-3"
+          buttonClassName="p-button-outlined h-14 w-14 sm:h-14 sm:w-14 lg:h-16 lg:w-16 rounded-full text-sm sm:text-base"
         />
       </div>
     </main>

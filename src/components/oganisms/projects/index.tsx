@@ -37,7 +37,7 @@ export default function Projects() {
                 : "bg-gradient-to-r from-purple-600 to-blue-600"
             }`}
           >
-            Portfolio
+            Projects
           </p>
 
           <p
