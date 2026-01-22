@@ -6,7 +6,7 @@ export default function Footer() {
 
     return (
         <footer id="footer" className="w-full">
-            <div className={`backdrop-blur-lg border-t py-4 sm:py-6 lg:py-8 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
+            <div className={`backdrop-blur-lg border-t py-5 sm:py-4 lg:py-6 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
                 isDarkTheme 
                     ? 'bg-black/30 border-white/20' 
                     : 'bg-black border-black/20'
