@@ -25,7 +25,7 @@ export default function Home() {
       >
         <div className="relative group flex-shrink-0 mx-auto lg:mx-0">
           <div
-            className={`absolute -inset-4 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300 scale-125 ${
+            className={`absolute -inset-5 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-300 scale-110 ${
               isDarkTheme
                 ? "bg-gradient-to-r from-purple-600 to-pink-600"
                 : "bg-gradient-to-r from-blue-600 to-purple-600"
@@ -36,7 +36,7 @@ export default function Home() {
             alt="Logo"
             width="155"
             height="155"
-            className={`relative rounded-full border-4 shadow-xl w-42 h-42 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 object-cover transition-colors duration-300 ${
+            className={`relative rounded-full border-4 shadow-xl w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-52 lg:h-52 object-cover transition-colors duration-300 ${
               isDarkTheme ? "border-white/50" : "border-black/50"
             }`}
           />
